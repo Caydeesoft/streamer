@@ -43,7 +43,7 @@ class LoginController extends Controller
         public function __construct()
             {
                 $this->middleware('guest')->except('logout');
-                $this->api = 'https://vas.standardmedia.co.ke/api/';
+                //$this->api = 'https://vas.standardmedia.co.ke/api/';
 
             }
 
@@ -185,7 +185,7 @@ class LoginController extends Controller
             }
         public function attemptLogin(Request $request)
             {
-                $this->apilogin($request);
+               // $this->apilogin($request);
                 return $this->guard()->attempt(
                     $this->credentials($request), $request->filled('remember')
                 );

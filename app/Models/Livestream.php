@@ -8,6 +8,6 @@ class Livestream extends Model
     {
         public function livestream_users()
             {
-                return $this->hasMany('App\Models\Livestream_user');
+                return $this->hasMany(Livestream_user::class);
             }
     }
